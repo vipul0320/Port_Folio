@@ -18,7 +18,6 @@ header{
     top: 0;
     transition: height 0.3s ease; /* Smooth transition for height change */
 }
-
 header.shrink {
     height: 43px; /* Adjust the height when shrunk */
 }
@@ -26,6 +25,13 @@ header h1{
     margin-left: 10%;
     font-size: 45px;
     margin-top: 10px;
+}
+nav button {
+    display: none; /* Hide button by default for larger screens */
+}
+nav button i {
+    font-size: 24px;
+    color: white;
 }
 nav ul{
     list-style: none;
@@ -48,7 +54,6 @@ nav li{
 nav ul li a:hover {
     color: #ffcc00; /* Hover color */
 }
-
 .home-section {
     position: relative;
     /* background: url(images/black.jpg) no-repeat center center/cover; */
@@ -282,48 +287,64 @@ nav ul li a:hover {
     transform: scale(1.2);
     color: #ccc; /* Optional: Change color on hover */
 }
-/* Media queries for header */
+@media only screen and (max-width: 1024px) {
+    nav ul.nav-links {
+        margin-left: 120px; 
+    }
+    nav ul.nav-links li {
+        transition: margin-left 0.3s ease;
+    }
+    .projects-section {
+        padding: 30px 0; /* Adjust padding to create more space */
+        height: auto; /* Ensure height adjusts dynamically */
+    }
+    .project {
+        flex-direction: column; /* Stack projects vertically */
+        margin-bottom: 30px; /* Increase margin between projects */
+    }
+    .project-content {
+        padding-bottom: 30px; /* Adjust bottom padding */
+    }
+    .skills-section {
+        padding: 30px 0; /* Adjust padding to create more space */
+    }
+}
 @media only screen and (max-width: 768px) {
     header {
-        height: 80px; /* Example: Adjust as needed for smaller screens */
+        height: 70px; 
     }
-}
-
-/* Media queries for home section */
-@media only screen and (max-width: 768px) {
+    nav ul.nav-links {
+        margin-left: 40px; 
+        font-size: 20px;
+    }
+    nav ul.nav-links li {
+        transition: margin-left 0.3s ease;
+    }
     .home-section {
-        height: 400px; /* Example: Adjust as needed for smaller screens */
+        height: 500px; 
     }
     .left-content {
-        padding-left: 20px; /* Example: Adjust padding for smaller screens */
-        font-size: 40px; /* Example: Adjust font size for smaller screens */
+        padding-left: 20px; 
+        font-size: 30px; 
     }
     .right-content {
-        padding-right: 20px; /* Example: Adjust padding for smaller screens */
+        padding-right: 20px; 
     }
-}
-
-/* Media queries for about section */
-@media only screen and (max-width: 768px) {
     .about-section {
-        padding: 20px 0; /* Example: Adjust padding for smaller screens */
+        padding: 20px 0; 
     }
     .about-section h1 {
-        font-size: 40px; /* Example: Adjust font size for smaller screens */
+        font-size: 40px; 
     }
     .about-section p {
-        font-size: 20px; /* Example: Adjust font size for smaller screens */
+        font-size: 20px; 
         max-width: 600px; /* Example: Adjust max-width for smaller screens */
     }
-}
-
-/* Media queries for projects section */
-@media only screen and (max-width: 768px) {
     .projects-section {
-        padding: 30px 0; /* Example: Adjust padding for smaller screens */
+        padding: 30px 0; 
     }
     .projects-section h1 {
-        font-size: 40px; /* Example: Adjust font size for smaller screens */
+        font-size: 40px; 
     }
     .project {
         flex-direction: column; /* Example: Adjust layout for smaller screens */
@@ -332,71 +353,83 @@ nav ul li a:hover {
         text-align: center; /* Example: Adjust alignment for smaller screens */
     }
     .project-content {
-        padding: 20px; /* Example: Adjust padding for smaller screens */
+        padding: 20px; 
     }
     .project-content h3 {
-        font-size: 30px; /* Example: Adjust font size for smaller screens */
+        font-size: 30px; 
     }
     .project-content p {
-        font-size: 18px; /* Example: Adjust font size for smaller screens */
+        font-size: 18px; 
     }
-    @media only screen and (max-width: 1024px) {
-        .projects-section {
-            padding: 30px 0; /* Adjust padding to create more space */
-            height: auto; /* Ensure height adjusts dynamically */
-        }
-        .project {
-            flex-direction: column; /* Stack projects vertically */
-            margin-bottom: 30px; /* Increase margin between projects */
-        }
-        .project-content {
-            padding-bottom: 30px; /* Adjust bottom padding */
-        }
+    .skills-section {
+        padding: 30px 0; 
     }
-    
-    /* Media queries for skills section on tablets and mobile devices */
-    @media only screen and (max-width: 1024px) {
-        .skills-section {
-            padding: 30px 0; /* Adjust padding to create more space */
-        }
+    .skills-section h1 {
+        font-size: 40px; 
+    }
+    .skills-column {
+        margin: 10px; 
+    }
+    .tech-skills,
+    .skills-column ul {
+        margin: 10px 0; 
+    }
+    .skills-column li {
+        font-size: 20px; 
+    }
+    .footer-section {
+        padding: 20px 0; 
+    }
+    .footer-section h1 {
+        font-size: 40px; 
+    }
+    .footer-section p {
+        font-size: 18px; 
+    }
+    .social-icons a {
+        font-size: 18px; 
     }
 }
 
 /* Media queries for skills section */
-@media only screen and (max-width: 768px) {
-    .skills-section {
-        padding: 30px 0; /* Example: Adjust padding for smaller screens */
+@media only screen and (max-width: 426px) {
+    nav ul {
+        display: none; /* Hide the entire list on smaller screens */
     }
-    .skills-section h1 {
-        font-size: 40px; /* Example: Adjust font size for smaller screens */
-    }
-    .skills-column {
-        margin: 10px; /* Example: Adjust margin for smaller screens */
-    }
-    .tech-lists {
-        flex-direction: column; /* Example: Adjust layout for smaller screens */
-    }
-    .tech-skills,
-    .skills-column ul {
-        margin: 10px 0; /* Example: Adjust margin for smaller screens */
-    }
-    .skills-column li {
-        font-size: 20px; /* Example: Adjust font size for smaller screens */
-    }
-}
+    @media only screen and (max-width: 426px) {
+        header{
+            position: static;
+        }
+        .home-section{
+            height: 400px;
+            padding-top: 30px;
+        }
+        .left-content {
+            padding-left: 0px; 
+            font-size: 30px; 
+        }
+        .left-content p{
+            font-size: 25px;
+        }
 
-/* Media queries for footer section */
-@media only screen and (max-width: 768px) {
-    .footer-section {
-        padding: 20px 0; /* Example: Adjust padding for smaller screens */
+        .right-content img{
+            height: 240px;
+            width: 200%;
+            border-radius: 0%;
+            margin-left: 50px;
+            margin-bottom: 130px;
+
+        }
+        .skills-section h3 {
+            font-size: 20px; 
+        }
+        .skills-section li{
+            font-size: 15px;
+        }
+
+
+        
     }
-    .footer-section h1 {
-        font-size: 40px; /* Example: Adjust font size for smaller screens */
-    }
-    .footer-section p {
-        font-size: 18px; /* Example: Adjust font size for smaller screens */
-    }
-    .social-icons a {
-        font-size: 18px; /* Example: Adjust font size for smaller screens */
-    }
+    
+    
 }
