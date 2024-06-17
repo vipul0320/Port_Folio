@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+.highlight {
+    color: #ffcc00; /* Change this to the color you want */
+}
+header{
+    background-color: rgba(7, 6, 6, 0.966);
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    transition: height 0.3s ease; /* Smooth transition for height change */
+}
+
+header.shrink {
+    height: 43px; /* Adjust the height when shrunk */
+}
+header h1{
+    margin-left: 10%;
+    font-size: 45px;
+    margin-top: 10px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 200%;
+    font-size: 25px;
+    margin-top: 10px;
+    
+}
+nav a{
+    color: white;
+    text-decoration: none;
+
+}
+nav li{
+    margin: 15px;
+    
+}
+nav ul li a:hover {
+    color: #ffcc00; /* Hover color */
+}
+
+.home-section {
+    position: relative;
+    /* background: url(images/black.jpg) no-repeat center center/cover; */
+    height: 595px;
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px; 
+}
+
+.home-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    width: 100%; 
+}
+
+.left-content {
+    flex: 2;
+    font-size: 60px;
+    padding-left: 120px;
+    padding-bottom: 60px;
+}
+.left-content p{
+    font-size: 40px;
+    padding: 10px;
+}
+
+.left-content button {
+    height: 60px;
+    width: 130px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: antiquewhite;
+    color: black;
+    margin-left: 1%;
+    margin-top: 5%;
+    cursor: pointer; /* Ensure cursor changes to pointer when hovering over */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.left-content button:hover {
+    background-color: #e6e6e6; /* Lighten background color on hover */
+    color: black; /* Ensure text color remains visible */
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 90px;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 40px 0; /* Adjust padding as needed */
+}
+
+.about-section h1 {
+    font-size: 50px;
+    margin-top: 5px;
+}
+
+.about-section p {
+    font-size: 30px;
+    line-height: 1.6;
+    max-width: 800px; 
+    margin-top: 20px;
+}
+.about-section button{
+    height: 60px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.about-section a{
+    text-decoration: none;
+    color: black;
+}
+.projects-section {
+    padding: 50px 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+    height: 1330px;
+}
+
+.projects-section h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #fff; /* Ensure the heading text is white */
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.project-photo {
+    flex: 1;
+    text-align: left;
+}
+
+.project-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    padding-bottom: 130px;
+}
+
+.project-content h3 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: rgb(188, 183, 183); /* Ensure the heading text is white */
+}
+
+.project-content p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: white; /* Ensure the paragraph text is white */
+}
+
+.skills-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills-section h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left; /* Align text to the left in columns */
+}
+
+.skills-column {
+    flex: 1;
+    margin: 20px;
+    max-width: 400px; /* Adjust max-width as needed */
+}
+
+.skills-column h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tech-lists {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tech-skills {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 20px;
+}
+
+.tech-skills li {
+    font-size: 30px;
+    margin-bottom: 10px;
+    
+}
+
+.skills-column ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 30px;
+}
+
+.skills-column li {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.footer-section {
+    background-color: rgb(30, 29, 29); /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer-section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 23px;
+    padding-top: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #fff; /* White color for icons */
+    font-size: 20px; /* Adjust icon size */
+    transition: transform 0.3s;
+    padding-bottom: 10px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #ccc; /* Optional: Change color on hover */
+}
+/* Media queries for header */
+@media only screen and (max-width: 768px) {
+    header {
+        height: 80px; /* Example: Adjust as needed for smaller screens */
+    }
+}
+
+/* Media queries for home section */
+@media only screen and (max-width: 768px) {
+    .home-section {
+        height: 400px; /* Example: Adjust as needed for smaller screens */
+    }
+    .left-content {
+        padding-left: 20px; /* Example: Adjust padding for smaller screens */
+        font-size: 40px; /* Example: Adjust font size for smaller screens */
+    }
+    .right-content {
+        padding-right: 20px; /* Example: Adjust padding for smaller screens */
+    }
+}
+
+/* Media queries for about section */
+@media only screen and (max-width: 768px) {
+    .about-section {
+        padding: 20px 0; /* Example: Adjust padding for smaller screens */
+    }
+    .about-section h1 {
+        font-size: 40px; /* Example: Adjust font size for smaller screens */
+    }
+    .about-section p {
+        font-size: 20px; /* Example: Adjust font size for smaller screens */
+        max-width: 600px; /* Example: Adjust max-width for smaller screens */
+    }
+}
+
+/* Media queries for projects section */
+@media only screen and (max-width: 768px) {
+    .projects-section {
+        padding: 30px 0; /* Example: Adjust padding for smaller screens */
+    }
+    .projects-section h1 {
+        font-size: 40px; /* Example: Adjust font size for smaller screens */
+    }
+    .project {
+        flex-direction: column; /* Example: Adjust layout for smaller screens */
+    }
+    .project-photo {
+        text-align: center; /* Example: Adjust alignment for smaller screens */
+    }
+    .project-content {
+        padding: 20px; /* Example: Adjust padding for smaller screens */
+    }
+    .project-content h3 {
+        font-size: 30px; /* Example: Adjust font size for smaller screens */
+    }
+    .project-content p {
+        font-size: 18px; /* Example: Adjust font size for smaller screens */
+    }
+    @media only screen and (max-width: 1024px) {
+        .projects-section {
+            padding: 30px 0; /* Adjust padding to create more space */
+            height: auto; /* Ensure height adjusts dynamically */
+        }
+        .project {
+            flex-direction: column; /* Stack projects vertically */
+            margin-bottom: 30px; /* Increase margin between projects */
+        }
+        .project-content {
+            padding-bottom: 30px; /* Adjust bottom padding */
+        }
+    }
+    
+    /* Media queries for skills section on tablets and mobile devices */
+    @media only screen and (max-width: 1024px) {
+        .skills-section {
+            padding: 30px 0; /* Adjust padding to create more space */
+        }
+    }
+}
+
+/* Media queries for skills section */
+@media only screen and (max-width: 768px) {
+    .skills-section {
+        padding: 30px 0; /* Example: Adjust padding for smaller screens */
+    }
+    .skills-section h1 {
+        font-size: 40px; /* Example: Adjust font size for smaller screens */
+    }
+    .skills-column {
+        margin: 10px; /* Example: Adjust margin for smaller screens */
+    }
+    .tech-lists {
+        flex-direction: column; /* Example: Adjust layout for smaller screens */
+    }
+    .tech-skills,
+    .skills-column ul {
+        margin: 10px 0; /* Example: Adjust margin for smaller screens */
+    }
+    .skills-column li {
+        font-size: 20px; /* Example: Adjust font size for smaller screens */
+    }
+}
+
+/* Media queries for footer section */
+@media only screen and (max-width: 768px) {
+    .footer-section {
+        padding: 20px 0; /* Example: Adjust padding for smaller screens */
+    }
+    .footer-section h1 {
+        font-size: 40px; /* Example: Adjust font size for smaller screens */
+    }
+    .footer-section p {
+        font-size: 18px; /* Example: Adjust font size for smaller screens */
+    }
+    .social-icons a {
+        font-size: 18px; /* Example: Adjust font size for smaller screens */
+    }
+}
